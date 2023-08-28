@@ -1,0 +1,32 @@
+@api = http://localhost:3000/api/v1
+
+### Request all products
+GET {{api}}/products
+
+### Request one product
+GET {{api}}/products/jesuseduardo
+
+### Created a products
+POST {{api}}/products
+Content-Type: application/json
+
+{
+  "name":"new product",
+  "price": 500,
+  "image": "https://picsum.photos/seed/cVHTxEi/640/480"
+
+}
+
+### A partial update
+
+PATCH {{api}}/products/4f3f7076-e431-4b0
+Content-Type: application/json
+
+{
+  "price": 500
+}
+
+
+### A delete partial
+
+DELETE {{api}}/products/ed7b9bdf-4cd9-49b6-b1dc-4b8b879e3e04
